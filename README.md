@@ -1,4 +1,4 @@
-## Deploy - https://downerpower-crud-operations.netlify.app/logIn
+## Deploy - https://downerpower-crud-operations.netlify.app
 
 ## Languages and Tools 
 - TypeScript
