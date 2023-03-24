@@ -1,13 +1,169 @@
+html,
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  overflow: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  text-align: center;
+  color: white;
+}
+p {
+  margin: 0;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  min-width: 450px;
+  max-width: fit-content;
+  background-color: #1d1d1d;
+  justify-content: center;
+  padding: 1rem 2.2rem;
+  margin: 3rem auto;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(66, 61, 61, 0.299);
+  box-shadow: 5px 5px 15px 5px rgba(66, 61, 61, 0.299);
+}
+
+.form__text {
+  color: white;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.form__input {
+  background-color: #0f0f0f;
+  width: 100%;
+  border: none;
+  font-size: 20px;
+  padding: 1.2rem;
+  color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+.form__button {
+  background-color: #474747;
+  width: 100%;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  border: none;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.form__button:hover {
+  background-color: #b5b4b4;
+  color: black;
+}
+
+.error {
+  color: red;
+}
+
+.error-text {
+  margin-top: -1.1rem;
+  margin-left: 0.2rem;
+  font-size: 15px;
+  text-align: left;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: fit-content;
+  font-size: 20px;
+  background-color: rgba(255, 50, 50, 0.662);
+  color: white;
+  padding: 0.9rem 1rem;
+  margin: -0.5rem auto;
+  margin-bottom: 0.2rem;
+  border-radius: 5px;
+}
+
+.error-main {
+  width: 98%;
+  margin: 1rem auto;
+}
+
+.table__container {
+  margin: 1rem;
+}
+
+.react-spinner {
+  position: absolute;
+  width: 50px;
+  height: 32px;
+  top: 30%;
+  left: 50%;
+}
+
+.react-spinner_bar {
+  -webkit-animation: react-spinner_spin 1.2s linear infinite;
+  -moz-animation: react-spinner_spin 1.2s linear infinite;
+  animation: react-spinner_spin 1.2s linear infinite;
+  border-radius: 5px;
+  background-color: red;
+  position: absolute;
+  width: 30%;
+  height: 7.8%;
+  top: -3.9%;
+  left: -10%;
+}
+
+@keyframes react-spinner_spin {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@-moz-keyframes react-spinner_spin {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@-webkit-keyframes react-spinner_spin {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@media screen and (max-width: 1024px)  {
+  .form__container {
+    min-width: fit-content;
+  }
+  .error-message {
+    font-size: 14px;
+    padding: 0.6rem 0.6rem;
+  }
+}
+
+@media screen and (max-width: 470px)  {
+  .form__container {
+    padding: 0.5rem 1.1rem;
+    margin: 2rem auto;
+  }
 }
