@@ -29,7 +29,7 @@ function Header({ isLogin }: Props) {
           >
             <Typography variant="h4">TEST TASK</Typography>
           </Link>
-          {isLogin ? (
+          {isLogin && (
             <Button
               sx={{
                 marginLeft: "auto",
@@ -45,24 +45,6 @@ function Header({ isLogin }: Props) {
               onClick={handleLogoutClick}
             >
               Log out
-            </Button>
-          ) : (
-            <Button
-              component={RouterLink}
-              to="/logIn"
-              sx={{
-                marginLeft: "auto",
-                padding: "0.5rem, 1rem",
-                fontSize: "1.2rem",
-                backgroundColor: "#474747",
-                "&:hover": {
-                  color: "black",
-                },
-              }}
-              color="inherit"
-              variant="contained"
-            >
-              Log in
             </Button>
           )}
         </Toolbar>

@@ -21,7 +21,6 @@ const loginSlice = createSlice({
    reducers: {
       setLoading(state, action: PayloadAction<FormData>) {
          state.isLoading = true
-         console.log(action.payload)
       },
       setToken(state, action: PayloadAction<any>) {
          state.errorCode = 0
